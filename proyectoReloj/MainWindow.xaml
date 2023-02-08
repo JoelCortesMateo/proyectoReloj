@@ -14,49 +14,58 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="1" x:Name="hora" Height="54" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="36" Grid.Row="0" HorizontalAlignment="Center">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF1885EA" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground><Run Text="00:00"/><Run Language="es-es" Text=":00"/></TextBlock>
+            <TextBlock Grid.Column="2" HorizontalAlignment="Center" Height="54" TextWrapping="Wrap" VerticalAlignment="Center" Width="176" FontSize="36" Grid.Row="0">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF1885EA" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground><Run Language="es-es" Text="Hora Local"/></TextBlock>
         </Grid>
-        <TextBlock Grid.Row="0" x:Name="fecha" HorizontalAlignment="Center" Height="54" Margin="0,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" FontSize="40" RenderTransformOrigin="0.494,0.482">
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" x:Name="temporizador" Content="" HorizontalAlignment="Center" Height="124" VerticalAlignment="Center" Width="123" FontWeight="Bold" FontSize="16" BorderBrush="{x:Null}" Click="temporizador_Click" Grid.Row="0" >
+                <Button.Background>
+                    <ImageBrush ImageSource="/temporizador.png"/>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="1" x:Name="alarma" Content="" HorizontalAlignment="Center" Height="124" VerticalAlignment="Center" Width="124" BorderBrush="{x:Null}" FontSize="16" FontWeight="Bold" Click="alarma_Click" Grid.Row="0">
+                <Button.Background>
+                    <ImageBrush ImageSource="/alarma.png"/>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="2" x:Name="cronometro" Content="" HorizontalAlignment="Center" Height="124" VerticalAlignment="Center" Width="123" BorderBrush="{x:Null}" FontSize="16" FontWeight="Bold" Click="cronometro_Click" Grid.Row="0">
+                <Button.Background>
+                    <ImageBrush ImageSource="/cronometro.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <TextBlock Grid.Row="0" x:Name="fecha" HorizontalAlignment="Center" Height="54" TextWrapping="Wrap" VerticalAlignment="Center" Width="176" FontSize="40" RenderTransformOrigin="0.494,0.482">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
                     <GradientStop Color="#FF1885EA" Offset="1"/>
                 </LinearGradientBrush>
             </TextBlock.Foreground><Run Language="es-es" Text="00/00/00"/></TextBlock>
-        <TextBlock Grid.Row="0" x:Name="hora" Height="54" Margin="243,83,400,0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="36">
-            <TextBlock.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF1885EA" Offset="1"/>
-                </LinearGradientBrush>
-            </TextBlock.Foreground><Run Text="00:00"/><Run Language="es-es" Text=":00"/></TextBlock>
-        <TextBlock Grid.Row="0" HorizontalAlignment="Left" Height="54" Margin="386,83,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="176" FontSize="36">
-            <TextBlock.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF1885EA" Offset="1"/>
-                </LinearGradientBrush>
-            </TextBlock.Foreground><Run Language="es-es" Text="Hora Local"/></TextBlock>
-        <Button Grid.Column="0" x:Name="temporizador" Content="" HorizontalAlignment="Left" Height="124" Margin="84,0,0,0" VerticalAlignment="Center" Width="123" FontWeight="Bold" FontSize="16" BorderBrush="{x:Null}" Click="temporizador_Click" Grid.Row="1" >
-            <Button.Background>
-                <ImageBrush ImageSource="/temporizador.png"/>
-            </Button.Background>
-        </Button>
-        <Button Grid.Column="1" x:Name="alarma" Content="" HorizontalAlignment="Center" Height="124" VerticalAlignment="Center" Width="124" BorderBrush="{x:Null}" FontSize="16" FontWeight="Bold" Click="alarma_Click" Grid.Row="1">
-            <Button.Background>
-                <ImageBrush ImageSource="/alarma.png"/>
-            </Button.Background>
-        </Button>
-        <Button Grid.Column="2" x:Name="cronometro" Content="" HorizontalAlignment="Left" Height="124" Margin="618,0,0,0" VerticalAlignment="Center" Width="123" BorderBrush="{x:Null}" FontSize="16" FontWeight="Bold" Click="cronometro_Click" Grid.Row="1">
-            <Button.Background>
-                <ImageBrush ImageSource="/cronometro.png"/>
-            </Button.Background>
-        </Button>
     </Grid>
 </Window>

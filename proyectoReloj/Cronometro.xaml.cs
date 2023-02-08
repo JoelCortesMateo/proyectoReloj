@@ -34,12 +34,13 @@ namespace proyectoReloj
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             timer.Start();
-            reset.IsEnabled= true;
+            reset.IsEnabled= false;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            timer.Stop(); 
+            timer.Stop();
+            reset.IsEnabled = true;
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -57,7 +58,9 @@ namespace proyectoReloj
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-           
+           Temporizador tempo = new Temporizador();
+            tempo.Show();
+            Hide();
         }
 
         private void Button_Reset(object sender, RoutedEventArgs e)

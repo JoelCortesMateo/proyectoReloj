@@ -10,6 +10,23 @@
         <Grid.Background>
             <ImageBrush ImageSource="/mundo.jpg"/>
         </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Stop" Grid.Column="0" Content="Stop" HorizontalAlignment="Center"  VerticalAlignment="Center" Height="87" Width="87" Click="stopButton_Click" Background="#FFAFC0EA"/>
+            <Button x:Name="Restart" Grid.Column="1" Content="Restart" HorizontalAlignment="Center" VerticalAlignment="Center" Height="53" Width="64" Click="resetButton_Click" Background="Red"/>
+            <Button x:Name="Start" Grid.Column="2" Content="Start" HorizontalAlignment="Center" VerticalAlignment="Center" Height="87" Width="87" Click="startButton_Click" Background="#FF03F506"/>
+        </Grid>
         <Button Grid.Row="0" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="35" Width="62" BorderBrush="{x:Null}" Click="Button_Click_2">
             <Button.Background>
                 <ImageBrush ImageSource="/pngwing.com.png"/>
@@ -17,7 +34,7 @@
         </Button>
         <Button Grid.Row="0" Content="" HorizontalAlignment="Left" Margin="0,45,0,0" VerticalAlignment="Top" Height="35" Width="44" BorderBrush="{x:Null}" Click="Button_Click_3">
             <Button.Background>
-                <ImageBrush ImageSource="/temporizador.png"/>
+                <ImageBrush ImageSource="/cronometro.png"/>
             </Button.Background>
         </Button>
         <Button Grid.Row="0" Content="" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Height="35" Width="44" BorderBrush="{x:Null}">
@@ -25,8 +42,8 @@
                 <ImageBrush ImageSource="/alarma.png"/>
             </Button.Background>
         </Button>
-        <Label Content="Introduce el Tiempo que desee: " HorizontalAlignment="Center" Margin="0,132,0,0" VerticalAlignment="Top" Width="516" FontSize="36"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="225,291,0,0" VerticalAlignment="Top" Height="87" Width="87"/>
-
+        <Label HorizontalAlignment="Center" Content="Introduce el Tiempo que desee:" Grid.Row="1" VerticalAlignment="Center" Width="521" FontSize="36"/>
+        <TextBox x:Name="timerTextBox" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="124" Height="34" FontSize="22" Text="0" TextAlignment="Center"/>
+        <Label x:Name="tempo" Grid.Row="3" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="188" FontSize="48" />
     </Grid>
 </Window>

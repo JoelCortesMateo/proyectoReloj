@@ -5,7 +5,3 @@ Este proyecto trata sobre la aplicación sobre un reloj donde puedes visualizar 
 
 
 Página de Odoo: https://joelcortes.odoo.com/@/
-
-# Profe:
-Más adelante se añadirán funcionalidades.
-Además aquí debes añadir la dirección de tu pàgina en Odoo.

@@ -11,13 +11,13 @@
             <ImageBrush ImageSource="/mundo.jpg"/>
         </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="4">
+        <Grid Grid.Row="3" Margin="0,87,0,0" Grid.RowSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -37,13 +37,13 @@
                 <ImageBrush ImageSource="/cronometro.png"/>
             </Button.Background>
         </Button>
-        <Button Grid.Row="0" Content="" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Height="35" Width="44" BorderBrush="{x:Null}">
+        <Button Grid.Row="0" Content="" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Height="35" Width="44" BorderBrush="{x:Null}" Click="Button_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/alarma.png"/>
             </Button.Background>
         </Button>
-        <Label HorizontalAlignment="Center" Content="Introduce el Tiempo que desee:" Grid.Row="1" VerticalAlignment="Center" Width="521" FontSize="36"/>
+        <Label HorizontalAlignment="Center" Content="Introduce el Tiempo que desee:" Grid.Row="1" VerticalAlignment="Center" Width="350" FontSize="24" Height="42"/>
         <TextBox x:Name="timerTextBox" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="124" Height="34" FontSize="22" Text="0" TextAlignment="Center"/>
-        <Label x:Name="tempo" Grid.Row="3" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="188" FontSize="48" />
+        <Label x:Name="tempo" Grid.Row="3" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="188" FontSize="48" Height="74" />
     </Grid>
 </Window>

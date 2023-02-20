@@ -83,5 +83,12 @@ namespace proyectoReloj
             crono.Show();
             Hide();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Alarma alarma = new Alarma();
+            alarma.Show();
+            Hide();
+        }
     }
 }

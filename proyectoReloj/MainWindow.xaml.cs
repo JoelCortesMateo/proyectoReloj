@@ -37,7 +37,9 @@ namespace proyectoReloj
 
         private void alarma_Click(object sender, RoutedEventArgs e)
         {
-
+            Alarma alarma = new Alarma();
+            alarma.Show();
+            Hide();
         }
 
         private void temporizador_Click(object sender, RoutedEventArgs e)

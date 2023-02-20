@@ -70,5 +70,12 @@ namespace proyectoReloj
             TimeTextBlock.Text = elapsedTime.ToString("G");
             reset.IsEnabled = false;
         }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            Alarma alarma = new Alarma();
+            alarma.Show();
+            Hide();
+        }
     }
 }

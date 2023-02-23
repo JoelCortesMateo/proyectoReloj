@@ -38,13 +38,15 @@ namespace proyectoReloj
             // Detiene el temporizador
             DispatcherTimer timer = (DispatcherTimer)sender;
             timer.Stop();
+            btnDetener.IsEnabled = false;
+            btnActivar.IsEnabled = true;
         }
 
         private void btnActivar_Click(object sender, RoutedEventArgs e)
         {
             // Obtiene la hora y el minuto seleccionados por el usuario
-            int hora = int.Parse(cmbHora.SelectedValue.ToString());
-            int minuto = int.Parse(cmbMinuto.SelectedValue.ToString());
+            int hora = int.Parse(cmbHora.Text);
+            int minuto = int.Parse(cmbMinuto.Text);
 
             // Crea un DateTime con la hora y el minuto seleccionados
             DateTime horaAlarma = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, hora, minuto, 0);

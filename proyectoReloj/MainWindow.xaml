@@ -9,7 +9,7 @@
         Title="Reloj" Height="450" Width="800">
     <Grid OpacityMask="Black">
         <Grid.Background>
-            <ImageBrush ImageSource="/mundo.jpg" Stretch="Fill" TileMode="None" Opacity="0.4"/>
+            <ImageBrush x:Name="fondo" ImageSource="/mundo.jpg" Stretch="Fill" TileMode="None" Opacity="0.4"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -67,5 +67,7 @@
                     <GradientStop Color="#FF1885EA" Offset="1"/>
                 </LinearGradientBrush>
             </TextBlock.Foreground><Run Language="es-es" Text="00/00/00"/></TextBlock>
+        <ToggleButton Content="Modo Nocturno" HorizontalAlignment="Right" Grid.Row="0" VerticalAlignment="Center" x:Name="nocturno" Checked="nocturno_Checked" Unchecked="noctruno_Unchecked"/>
+
     </Grid>
 </Window>

@@ -61,6 +61,20 @@ namespace proyectoReloj
             hora.Text = DateTime.Now.ToLongTimeString();
         }
 
+        private void nocturno_Checked(object sender, RoutedEventArgs e) {
+            fondo.Opacity= 0;   
+            BitmapImage image = new BitmapImage(new Uri("C:\\Users\\Administrador\\source\\repos\\proyectoReloj\\proyectoReloj\\mundoNocturno.jpg", UriKind.RelativeOrAbsolute));
+            
+            this.Background = new ImageBrush(image);
+            nocturno.Content = "Modo Claro";
+        }
+
+        private void noctruno_Unchecked(object sender, RoutedEventArgs e)
+        {
+            BitmapImage image = new BitmapImage(new Uri("C:\\Users\\Administrador\\source\\repos\\proyectoReloj\\proyectoReloj\\mundo.jpg", UriKind.RelativeOrAbsolute));
+            nocturno.Content = "Modo Nocturno";
+            this.Background = new ImageBrush(image);
+        }
     }
 
 }

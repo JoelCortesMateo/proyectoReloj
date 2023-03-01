@@ -66,7 +66,7 @@ namespace proyectoReloj
         private void nocturno_Checked(object sender, RoutedEventArgs e) {
             fondo.Opacity= 0;
 
-            BitmapImage image = new BitmapImage(new Uri("'" + rutaImagen + "'", UriKind.RelativeOrAbsolute));
+            BitmapImage image = new BitmapImage(new Uri(rutaImagen, UriKind.RelativeOrAbsolute));
             this.Background = new ImageBrush(image);
             
             nocturno.Content = "Modo Claro";

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,7 @@ namespace proyectoReloj
     public partial class MainWindow : Window
     {
 
+        String rutaImagen = ConfigurationManager.AppSettings["nocturno"];
 
         public MainWindow()
         {
@@ -62,16 +64,17 @@ namespace proyectoReloj
         }
 
         private void nocturno_Checked(object sender, RoutedEventArgs e) {
-            fondo.Opacity= 0;   
-            BitmapImage image = new BitmapImage(new Uri("C:\\Users\\Administrador\\source\\repos\\proyectoReloj\\proyectoReloj\\mundoNocturno.jpg", UriKind.RelativeOrAbsolute));
-            
+            fondo.Opacity= 0;
+
+            BitmapImage image = new BitmapImage(new Uri("'" + rutaImagen + "'", UriKind.RelativeOrAbsolute));
             this.Background = new ImageBrush(image);
+            
             nocturno.Content = "Modo Claro";
         }
 
         private void noctruno_Unchecked(object sender, RoutedEventArgs e)
         {
-            BitmapImage image = new BitmapImage(new Uri("C:\\Users\\Administrador\\source\\repos\\proyectoReloj\\proyectoReloj\\mundo.jpg", UriKind.RelativeOrAbsolute));
+            BitmapImage image = new BitmapImage(new Uri("C:\\Users\\Administrador\\source\\repos\\proyectoReloj\\proyectoReloj\\mundo.png", UriKind.RelativeOrAbsolute));
             nocturno.Content = "Modo Nocturno";
             this.Background = new ImageBrush(image);
         }

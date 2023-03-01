@@ -9,7 +9,7 @@
         Title="Reloj" Height="450" Width="800">
     <Grid OpacityMask="Black">
         <Grid.Background>
-            <ImageBrush x:Name="fondo" ImageSource="/mundo.jpg" Stretch="Fill" TileMode="None" Opacity="0.4"/>
+            <ImageBrush x:Name="fondo" ImageSource="/mundo.png" Stretch="Fill" TileMode="None" Opacity="0.4"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition/>

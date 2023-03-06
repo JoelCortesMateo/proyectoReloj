@@ -25,8 +25,6 @@ namespace proyectoReloj
     public partial class MainWindow : Window
     {
 
-        String rutaImagen = ConfigurationManager.AppSettings["nocturno"];
-
         public MainWindow()
         {
             InitializeComponent();
@@ -65,8 +63,8 @@ namespace proyectoReloj
 
         private void nocturno_Checked(object sender, RoutedEventArgs e) {
             fondo.Opacity= 0;
-
-            BitmapImage image = new BitmapImage(new Uri(rutaImagen, UriKind.RelativeOrAbsolute));
+            String rutaImagen = ConfigurationManager.AppSettings["nocturno"];
+            BitmapImage image = new BitmapImage(new Uri("'"+ ConfigurationManager.AppSettings["nocturno"] + "'", UriKind.RelativeOrAbsolute));
             this.Background = new ImageBrush(image);
             
             nocturno.Content = "Modo Claro";

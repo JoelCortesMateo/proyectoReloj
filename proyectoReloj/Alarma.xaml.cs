@@ -52,11 +52,17 @@ namespace proyectoReloj
             DateTime horaAlarma = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, hora, minuto, 0);
 
             // Crea un DispatcherTimer para activar la alarma
-            timer = new DispatcherTimer();
-            timer.Interval = horaAlarma - DateTime.Now;
-            timer.Tick += Timer_Tick;
-            timer.Start();
-
+            try
+            {
+                timer = new DispatcherTimer();
+                timer.Interval = horaAlarma - DateTime.Now;
+                timer.Tick += Timer_Tick;
+                timer.Start();
+            }
+            catch (System.ArgumentOutOfRangeException)
+            {
+                MessageBox.Show("Hora fuera de rango");
+            }
             // Habilita el botón de detener la alarma y deshabilita el botón de activar la alarma
             btnDetener.IsEnabled = true;
             btnActivar.IsEnabled = false;

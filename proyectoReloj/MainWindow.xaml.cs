@@ -68,13 +68,23 @@ namespace proyectoReloj
             this.Background = new ImageBrush(image);
             
             nocturno.Content = "Modo Claro";
+
+            Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            config.AppSettings.Settings["nocturno"].Value = rutaImagen;
+            config.Save();
         }
 
         private void noctruno_Unchecked(object sender, RoutedEventArgs e)
         {
-            BitmapImage image = new BitmapImage(new Uri("C:\\Users\\Administrador\\source\\repos\\proyectoReloj\\proyectoReloj\\mundo.png", UriKind.RelativeOrAbsolute));
-            nocturno.Content = "Modo Nocturno";
+            String rutaImagen = ConfigurationManager.AppSettings["dia"];
+            BitmapImage image = new BitmapImage(new Uri(rutaImagen, UriKind.RelativeOrAbsolute));
             this.Background = new ImageBrush(image);
+
+            nocturno.Content = "Modo Nocturno";
+
+            Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            config.AppSettings.Settings["dia"].Value = rutaImagen;
+            config.Save();
         }
     }
 

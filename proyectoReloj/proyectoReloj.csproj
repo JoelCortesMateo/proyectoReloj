@@ -118,22 +118,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="temporizador.png" />
+    <Resource Include="Imagenes\temporizador.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="alarma.png" />
+    <Resource Include="Imagenes\alarma.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="cronometro.png" />
+    <Resource Include="Imagenes\cronometro.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="pngwing.com.png" />
+    <Resource Include="Imagenes\pngwing.com.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="mundoNocturno.png" />
+    <Resource Include="Imagenes\mundoNocturno.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="mundo.png" />
+    <Resource Include="Imagenes\mundo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

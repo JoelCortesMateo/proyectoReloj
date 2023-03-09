@@ -9,7 +9,7 @@
         Title="Reloj" Height="450" Width="800">
     <Grid OpacityMask="Black">
         <Grid.Background>
-            <ImageBrush x:Name="fondo" ImageSource="/mundo.png" Stretch="Fill" TileMode="None" Opacity="0.4"/>
+            <ImageBrush x:Name="fondo" ImageSource="/Imagenes/mundo.png" Stretch="Fill" TileMode="None" Opacity="0.4"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -46,17 +46,17 @@
             </Grid.ColumnDefinitions>
             <Button Grid.Column="0" x:Name="temporizador" Content="" HorizontalAlignment="Center" Height="124" VerticalAlignment="Center" Width="123" FontWeight="Bold" FontSize="16" BorderBrush="{x:Null}" Click="temporizador_Click" Grid.Row="0" >
                 <Button.Background>
-                    <ImageBrush ImageSource="/temporizador.png"/>
+                    <ImageBrush ImageSource="/Imagenes/temporizador.png"/>
                 </Button.Background>
             </Button>
             <Button Grid.Column="1" x:Name="alarma" Content="" HorizontalAlignment="Center" Height="124" VerticalAlignment="Center" Width="124" BorderBrush="{x:Null}" FontSize="16" FontWeight="Bold" Click="alarma_Click" Grid.Row="0">
                 <Button.Background>
-                    <ImageBrush ImageSource="/alarma.png"/>
+                    <ImageBrush ImageSource="/Imagenes/alarma.png"/>
                 </Button.Background>
             </Button>
             <Button Grid.Column="2" x:Name="cronometro" Content="" HorizontalAlignment="Center" Height="124" VerticalAlignment="Center" Width="123" BorderBrush="{x:Null}" FontSize="16" FontWeight="Bold" Click="cronometro_Click" Grid.Row="0">
                 <Button.Background>
-                    <ImageBrush ImageSource="/cronometro.png"/>
+                    <ImageBrush ImageSource="/Imagenes/cronometro.png"/>
                 </Button.Background>
             </Button>
         </Grid>
